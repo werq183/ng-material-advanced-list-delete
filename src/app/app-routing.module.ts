@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
+import { SubjectFilteredProductListComponent } from './components/subject-filtered-product-list/subject-filtered-product-list.component';
+import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
+import { CategoriesServiceModule } from './services/categories.service-module';
+import { ProductServiceModule } from './services/product.service-module';
+import { SubjectFilteredProductListComponentModule } from './components/subject-filtered-product-list/subject-filtered-product-list.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([])],
+  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredProductListComponent }, { path: 'products', component: SubjectFilteredProductListComponent }]), FilteredProductListComponentModule, CategoriesServiceModule, ProductServiceModule, SubjectFilteredProductListComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
