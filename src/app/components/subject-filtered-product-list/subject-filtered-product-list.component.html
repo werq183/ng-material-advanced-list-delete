@@ -2,7 +2,8 @@
   <mat-card-title>Categories</mat-card-title>
   <mat-card-content>
     <mat-selection-list role="list" fxLayout="row" [multiple]="false">
-      <mat-list-option role="listoption" *ngFor="let item of categories$ | async" [value]="item" (click)="selectCategory(item)">
+      <mat-list-option role="listoption" *ngFor="let item of categories$ | async" [value]="item"
+                       (click)="selectCategory(item)">
         {{item}}
       </mat-list-option>
     </mat-selection-list>
