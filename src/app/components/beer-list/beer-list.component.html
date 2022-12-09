@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of beers$ | async">{{item.name}}</mat-list-item>
+    </mat-list>
+    <mat-paginator [length]="100"
+                   [pageSizeOptions]="limits"
+                   (page)="handlePageEvent($event)"
+                   aria-label="Select page">
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>
