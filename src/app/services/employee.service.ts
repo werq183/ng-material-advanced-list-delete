@@ -11,4 +11,8 @@ export class EmployeeService {
   getAll(): Observable<EmployeeModel[]> {
     return this._httpClient.get<EmployeeModel[]>('http://192.168.100.22:8080/employees.json');
   }
+
+  delete(id: number): Observable<EmployeeModel> {
+    return this._httpClient.delete<EmployeeModel>('https://dummy.restapiexample.com/public/api/v1/delete/' + id);
+  }
 }

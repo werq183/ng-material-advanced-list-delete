@@ -6,17 +6,19 @@ import { FlexModule } from '@angular/flex-layout/flex';
 import { SubjectFilteredProductListComponent } from './subject-filtered-product-list.component';
 import { RouterLink } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
-  imports: [
-    MatCardModule,
-    MatListModule,
-    AsyncPipe,
-    RouterLink,
-    FlexLayoutModule,
-    CommonModule,
-    FlexModule
-  ],
+    imports: [
+        MatCardModule,
+        MatListModule,
+        AsyncPipe,
+        RouterLink,
+        FlexLayoutModule,
+        CommonModule,
+        FlexModule,
+        MatButtonModule
+    ],
   declarations: [SubjectFilteredProductListComponent],
   providers: [],
   exports: [SubjectFilteredProductListComponent]

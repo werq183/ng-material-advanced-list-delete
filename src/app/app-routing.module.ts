@@ -5,6 +5,7 @@ import { SubjectFilteredProductListComponent } from './components/subject-filter
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { BeerListComponent } from './components/beer-list/beer-list.component';
+import { RefreshedEmployeesComponent } from './components/refreshed-employees/refreshed-employees.component';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
 import { ProductServiceModule } from './services/product.service-module';
@@ -14,9 +15,10 @@ import { EmployeeListComponentModule } from './components/employee-list/employee
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { BeerListComponentModule } from './components/beer-list/beer-list.component-module';
 import { BeerServiceModule } from './services/beer.service-module';
+import { RefreshedEmployeesComponentModule } from './components/refreshed-employees/refreshed-employees.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredProductListComponent }, { path: 'products', component: SubjectFilteredProductListComponent }, { path: 'products-sort', component: SortedProductListComponent }, { path: 'employees', component: EmployeeListComponent }, { path: 'beers', component: BeerListComponent }]), FilteredProductListComponentModule, CategoriesServiceModule, ProductServiceModule, SubjectFilteredProductListComponentModule, SortedProductListComponentModule, EmployeeListComponentModule, EmployeeServiceModule, BeerListComponentModule, BeerServiceModule],
+  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredProductListComponent }, { path: 'products', component: SubjectFilteredProductListComponent }, { path: 'products-sort', component: SortedProductListComponent }, { path: 'employees', component: EmployeeListComponent }, { path: 'beers', component: BeerListComponent }, { path: 'refresh-employees', component: RefreshedEmployeesComponent }]), FilteredProductListComponentModule, CategoriesServiceModule, ProductServiceModule, SubjectFilteredProductListComponentModule, SortedProductListComponentModule, EmployeeListComponentModule, EmployeeServiceModule, BeerListComponentModule, BeerServiceModule, RefreshedEmployeesComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
